@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #boxTime {
+        width: 300px;
+        height: 300px;
+        border: 2px solid pink;
+        margin: auto;
+    }
+
+    #box2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 100px auto;
+    }
+</style>
+
+<body>
+    <div id="boxTime"></div>
+    <div id="box2"></div>
+
+</body>
+<script>
+    setInterval(function () {
+
+
+        var date = new Date();
+        document.getElementById("boxTime").innerHTML = date;//--show date and time both
+        //document.getElementById("boxTime").innerHTML=date.toLocaleDateString();--if show only date
+        //document.getElementById("boxTime").innerHTML=date.toLocaleTimeString();//if show only time
+    }, 1000);
+    // create new fuction for disappear every 5 second
+    setInterval(function () {
+        //var color =document.getElementById('box2').style.backgroundColor="green";-- change color every 5 second
+        var color = document.getElementById('box2').style.display = "none";//box disappear every 5 second
+    }, 3000);
+</script>
+
+</html>
